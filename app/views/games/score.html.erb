@@ -1,0 +1,11 @@
+<% if @valid %>
+  <p>✅ "<%= @answer %>" can be formed from the letters: <%= @letters.join(", ") %></p>
+
+  <% if @is_longest %>
+    <p>🏆 Awesome! It's one of the longest possible words: <%= @answer %></p>
+  <% else %>
+    <p>❌ Not the longest. Longest possible words were: <%= @longest_words.join(", ") %></p>
+  <% end %>
+<% else %>
+  <p>❌ "<%= @answer %>" cannot be formed from the letters: <%= @letters.join(", ") %></p>
+<% end %>
